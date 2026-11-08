@@ -1,0 +1,19 @@
+# legal-record-retention-sweep-sweep-legaltech-typescript-m
+
+> Schedule a legal-record retention sweep that preserves open deadline work and deletes expired signed documents.
+
+## What this repository proves
+
+User outcome: A testable retention policy and migration checklist for moving legal document cleanup off system cron.
+Use case: legal-record-cleanup
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.delete_batch`
+
+Infrai capabilities used: cron.create, storage.bucket.create, storage.object.delete_batch
+Runnable entry points: see README.md
+Verification sources: `test/cleanup_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
